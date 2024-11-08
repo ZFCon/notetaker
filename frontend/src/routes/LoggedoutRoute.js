@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const LoggedoutRoute = ({ children }) => {
   const { token } = useSelector((state) => state.auth);
-  return !token ? children : <Navigate to="/dashboard" />;
+  return !token ? children : <Navigate to="/" />;
 };
 
 export default LoggedoutRoute;

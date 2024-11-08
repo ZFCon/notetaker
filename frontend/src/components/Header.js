@@ -33,7 +33,7 @@ const Header = () => {
                 ) : (
                     // Show Logout/Dashboard buttons when authenticated
                     <>
-                        <Button color="inherit" component={Link} to="/dashboard">
+                        <Button color="inherit" component={Link} to="/">
                             Dashboard
                         </Button>
                         <Button color="inherit" onClick={handleLogout}>

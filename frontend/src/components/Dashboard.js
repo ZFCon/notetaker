@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Paper, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import { Button, Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Paper, Dialog, DialogActions, DialogContent, DialogTitle, TextField, CircularProgress } from '@mui/material';
 import { fetchNotes, createNote, updateNote, deleteNote } from '../store/notesSlice';
 
 const Dashboard = () => {
@@ -103,6 +103,7 @@ const Dashboard = () => {
                 Create New Note
             </Button>
 
+            {loading && <CircularProgress />}
             {error && <p>{error}</p>}
 
             <TableContainer component={Paper}>

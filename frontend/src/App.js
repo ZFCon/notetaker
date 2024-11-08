@@ -26,7 +26,7 @@ function App() {
           </LoggedoutRoute>
         } />
         <Route
-          path="/dashboard"
+          path=""
           element={
             <AuthenticatedRoute>
               <Dashboard />

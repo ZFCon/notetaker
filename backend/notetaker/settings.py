@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Thirdparty
     "rest_framework",
     "drf_yasg",
+    "corsheaders",
     # My Apps
     "users",
     "notes",
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -149,3 +151,9 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+
+# Django CorsHeaders
+# https://pypi.org/project/django-cors-headers/ 
+
+CORS_ALLOW_ALL_ORIGINS = True

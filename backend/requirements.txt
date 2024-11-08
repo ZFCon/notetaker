@@ -4,3 +4,4 @@ djangorestframework-simplejwt==5.2.2
 pytest==8.3.3
 pytest-django==4.9.0
 drf-yasg==1.21.8
+django-cors-headers==3.11.0
